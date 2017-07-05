@@ -9,8 +9,8 @@ After you clone the repo I _highly_ suggest you add that directory to your Windo
 If you're unsure of how to do that, Google "add environment variables Windows (your version)"
 
 ## All commands included in the repo:
-1. *google.bat* -- [_Currently not functional_] Allows google search via CMD with Firefox
+1. ***google.bat*** -- [_Currently not functional_] Allows google search via CMD with Firefox
 
-2. *listFiles.bat* -- Creates a .txt file of all files in the current directory
+2. ***listFiles.bat*** -- Creates a .txt file of all files in the current directory
 
-3. *ls.bat* -- Prints a clean list of all files in the current directory (removes the junk of "dir")
+3. ***ls.bat*** -- Prints a clean list of all files in the current directory (removes the junk of "dir")
