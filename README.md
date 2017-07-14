@@ -20,3 +20,7 @@ If you're unsure of how to do that, Google "add environment variables Windows (y
 5. **listFiles.bat** -- Creates a .txt file of all files in the current directory
 
 6. **ls.bat** -- Prints a clean list of all files in the current directory (removes the junk of "dir")
+
+### &#x1F538; OTHER RAD CMD UTILITIES &#x1F538;
+
+[Sound eXchange - Process audio from CMD](http://sox.sourceforge.net/)
