@@ -2,3 +2,4 @@
 @ECHO OFF
 
 doskey league=leagueclient
+doskey desktop=C:\Users\%username\Desktop
