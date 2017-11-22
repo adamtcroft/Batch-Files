@@ -10,3 +10,6 @@ blog.bat
 343/haloLauncher.bat
 343/runTests.bat
 343/testLevels.bat
+343/cRunTestsModules.bat
+343/cRunTestsModulesXbox.bat
+343/cRunTestsXbox.bat
