@@ -17,15 +17,41 @@ if %1 == -c goto :chrome
 goto :default
 
 :firefox
-firefox https://www.google.com/search?q="%~2"
+SHIFT
+set args=%1
+
+:grabargsfox
+if "%2" NEQ "" (
+	set args=%args%+%2%
+	shift
+	goto :grabargsfox
+)
+
+ECHO Now searching: %args%
+firefox https://www.bing.com/search?q=%args%
 goto :end
 
 :chrome
-chrome https://www.google.com/search?q="%~2"
+SHIFT
+set args=%1
+
+:grabargschr
+if "%2" NEQ "" (
+	set args=%args%+%2%
+	shift
+	goto :grabargschr
+)
+
+ECHO Now searching: %args%
+chrome https://www.bing.com/search?q=%args%
 goto :end
 
 :default
-start https://www.google.com/search?q="%~1"
+SET args=%*
+ECHO Now searching: %args%
+SET args=%args: =+%
+start https://www.bing.com/search?q=%args%
+goto :end
 
 :help
 ECHO Searches Google with the desired browser and search term
