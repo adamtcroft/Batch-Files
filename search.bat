@@ -55,7 +55,7 @@ goto :end
 
 :help
 ECHO Searches Google with the desired browser and search term
-ECHO 
+ECHO. 
 ECHO Syntax: google.bat [browser] "[search term]"
 ECHO Syntax (if PATH set): google [browser] "[search term]"
 ECHO.
