@@ -1,6 +1,6 @@
-:: google.bat
+:: search.bat
 :: A short batch file to simplify
-:: searching Google from cmd
+:: searching Bing from cmd
 ::
 :: Adam T. Croft -- 2017
 :: adamtcroft.com
@@ -12,38 +12,29 @@
 if [%1] == [/?] goto :help
 
 :: Check browser flags
-if %1 == -f goto :firefox
-if %1 == -c goto :chrome
+if %1 == -f goto :getbrowser
+if %1 == -c goto :getbrowser
 goto :default
 
-:firefox
+:getbrowser
+set browser=%1
+
+if "%browser%" == "-c" set browser=chrome
+if "%browser%" == "-f" set browser=firefox
+
 SHIFT
 set args=%1
 
-:grabargsfox
+:grabargs
 if "%2" NEQ "" (
 	set args=%args%+%2%
 	shift
-	goto :grabargsfox
+	goto :grabargs
 )
 
 ECHO Now searching: %args%
-firefox https://www.bing.com/search?q=%args%
-goto :end
-
-:chrome
-SHIFT
-set args=%1
-
-:grabargschr
-if "%2" NEQ "" (
-	set args=%args%+%2%
-	shift
-	goto :grabargschr
-)
-
-ECHO Now searching: %args%
-chrome https://www.bing.com/search?q=%args%
+ECHO browser: %browser%
+%browser% https://www.bing.com/search?q=%args%
 goto :end
 
 :default
@@ -54,13 +45,12 @@ start https://www.bing.com/search?q=%args%
 goto :end
 
 :help
-ECHO Searches Google with the desired browser and search term
+ECHO Searches Bing with the desired browser and search term
 ECHO. 
-ECHO Syntax: google.bat [browser] "[search term]"
-ECHO Syntax (if PATH set): google [browser] "[search term]"
+ECHO Syntax: search.bat [browser] [search term]
+ECHO Syntax (if PATH set): search [browser] [search term]
 ECHO.
 ECHO browser: -f for Firefox, -c for Chrome, blank for default
-ECHO search term must be enclosed in quotation marks
 ECHO.
 
 :end
