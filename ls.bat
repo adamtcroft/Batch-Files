@@ -9,4 +9,4 @@
 :: Turn off command echo
 @ECHO OFF
 
-dir /b
+dir /b %1*
