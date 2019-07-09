@@ -1,3 +1,3 @@
 @echo off
 
-call aliases.bat
+aliases.bat
