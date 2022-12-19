@@ -1,7 +1,7 @@
 #!bin/zsh
 
 #turn off wifi
-networksetup -setairportpower $AIRPORT off
+networksetup -setairportpower en0 off
 
 #set timer
 hour=0
@@ -10,7 +10,7 @@ sec=0
        while [ $hour -ge 0 ]; do
                 while [ $min -ge 0 ]; do
                         while [ $sec -ge 0 ]; do
-                                echo -ne "$hour:$min:$sec\033[0K\r"
+                                echo "$hour:$min:$sec\033[0K\r"
                                 let "sec=sec-1"
                                 sleep 1
                         done
@@ -25,4 +25,4 @@ sec=0
 afplay /System/Library/Sounds/Ping.aiff 
 
 #turn on wifi
-networksetup -setairportpower $AIRPORT on
+networksetup -setairportpower en0 on
