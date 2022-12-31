@@ -18,7 +18,7 @@ fi
 	nextSunday=$(date -j -v-mon -v+${weekCount}w -v+6d "+%B%d_%Y")
 	weekOfDate=$(date -j -v-mon -v+${weekCount}w "+%B%d")
 	year=$(date -j -v-mon -v+${weekCount}w "+%Y")
-	monthFolder=$(date -j -v-mon-v+${weekCount}w "+%m_%B")
+	monthFolder=$(date -j -v-mon -v+${weekCount}w "+%m_%B")
 
 # Setup "WeekOfXYZ" string
 weekOfPrefix="WeekOf"
